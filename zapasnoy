@@ -1,0 +1,637 @@
+.high-section {
+  padding-top: 20px;
+  background-color: rgb(240, 239, 239);
+}
+
+.now {
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: 200px;
+}
+
+.first {
+  padding: 10px;
+  grid-column: 3/5;
+  grid-row: 1/3;
+  border-radius: 15px;
+  background-image: url(./img/Vector_2646.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.services button {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  width: max-content;
+  align-self: flex-end;
+  background-color: rgb(52, 51, 51);
+  color: white;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.services button:hover {
+  background-color: rgb(67, 66, 66);
+  transition: 1s;
+}
+
+.services-top p {
+  color: white;
+  font-size: 10px;
+
+}
+
+.services-top h2 {
+  color: white;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+
+.fifty-deg {
+  width: 50%;
+}
+
+.second {
+  display: block;
+  padding: 10px;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  /* background-color: #333333; */
+  background-image: url(./img/white-geometrical-shapes-background.jpg);
+  border-radius: 15px;
+  
+}
+
+.thrid {
+  display: block;
+  align-items: center;
+  padding: 10px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-radius: 15px;
+  background-color: #C84C09;
+}
+
+.four {
+  display: block;
+  padding: 10px;
+  border-radius: 15px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: #C4E609;
+}
+
+.section-item-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-item-top p {
+  text-transform: uppercase;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.white p {
+  color: white;
+}
+
+.kkk {
+  margin-top: 130px;
+  color: black;
+}
+
+.hhh {
+  color: white;
+}
+
+.jjj {
+  color: black;
+}
+
+.active {
+  margin-top: 20px;
+  font-size: clamp(5px, 5vw, 13px);
+  line-height: 17px;
+}
+
+.active span {
+  color: black;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sss {
+  margin-top: 20px;
+  display: block;
+  text-align: right;
+}
+
+.hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  pointer-events: none;
+}
+
+.visible {
+  position: relative;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+  max-height: 500px;
+}
+
+.sec-section {
+  height: 800px;
+  background-color: rgb(231, 230, 230);
+}
+
+.sec-section h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.team-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.team-items2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.item {
+  color: black;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: transparent;
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.1), 
+  inset 2px 2px 5px rgba(0, 0, 0, 0.7), 
+  5px 5px 10px rgba(0, 0, 0, 0.8);       
+}
+.item:hover{
+  transition: 0.4s ease;
+  transform: scale(1.01);
+  background-color: rgb(240, 239, 239);
+}
+
+.item h3 {
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.item p {
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+
+
+/* header 1.0 */
+header {
+  background-color: rgb(227, 227, 227);
+  height: 50px;
+  box-shadow: 10px 0.5px 0.5px black;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  background-image: url(./img/logok.svg);
+  width: 30px;
+  height: 30px;
+}
+
+.header-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-left-logo {
+  gap: 10px;
+  display: flex;
+}
+
+.logo-text p {
+  font-size: 20px;
+}
+
+.logo-text span {
+  color: #333333;
+}
+
+.logo-text span:hover {
+  transition: 0.1s;
+  color: #C84C09;
+}
+
+.header-left a:hover {
+  transition: 0.1s;
+  /* color: rgb(83, 80, 80); */
+  color: #C84C09;
+
+}
+
+
+.header-left a {
+  /* display: block; */
+  text-decoration: none;
+  color: rgb(30, 29, 29);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search img {
+  height: 30px;
+  width: 30px;
+}
+
+.start:hover {
+  background-color: #C84C09;
+  transition: 1s;
+}
+
+.start {
+  border: none;
+  color: black;
+  background-color: #93A8AC;
+  border-radius: 7px;
+  font-size: 15px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+/* 
+<header>
+<div class="container">
+  <div class="header-left">
+    <a class="header-left-logo" href="">
+      <div class="logo">
+      </div>
+      <div class="logo-text">
+        <p>It <span>Company</span></p>
+      </div>
+    </a>
+    <a href="">Product</a>
+    <a href="">Servis</a>
+    <a href="">App</a>
+    <a href="">FAQ</a>
+    <a href="">Partners</a>
+  </div>
+  <div class="header-right">
+    <button class="search">
+      <img src="./img/search.svg" alt="">
+    </button>
+    <button class="start">
+      Get started
+    </button>
+  </div>
+</div>
+</header> */
+/*  <div class="container now">
+        <div class="first">
+          <div class="fifty-deg">
+          </div>
+          <div class="services">
+            <div class="services-top">
+              <p>
+                More Offers
+              </p>
+              <h2>
+                Professional Solutions for You
+              </h2>
+            </div>
+            <button>
+              More Projects
+            </button>
+          </div>
+        </div>
+        <a href="#" class="second">
+
+        </a>
+        <a href="#" class="thrid">
+          <div class="section-item-top white">
+            <p class="Our-history">
+              Discover <br>
+              our history
+            </p>
+            <img src="./img/white.svg" alt="">
+          </div>
+          <h2 class="kkk hhh about-us">About us</h2>
+          <p class="active hidden hhh">
+            <span>
+              About Us
+            </span>
+            <br>
+            <br>
+            We are a dynamic tech company specializing in Python-based solutions to empower businesses and individuals.
+            Our expertise spans custom software development, data analytics, web applications, and automation tools.
+            <span class="sss">Learn More...</span>
+
+          </p>
+        </a>
+        <a href="#" class="four">
+          <div class="section-item-top black">
+            <p class="jjj">
+              Have any <br>
+              questions?
+            </p>
+            <img src="./img/black.svg" alt="">
+          </div>
+          <h2 class="kkk">Contact us</h2>
+        </a>
+      </div> */
+
+      
+.container {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+.high-section {
+  padding-top: 20px;
+  background-color: rgb(240, 239, 239);
+}
+
+.now {
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: 200px;
+}
+
+.first {
+  padding: 10px;
+  grid-column: 3/5;
+  grid-row: 1/3;
+  border-radius: 15px;
+  background-image: url(./img/Vector_2646.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.services button {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  width: max-content;
+  align-self: flex-end;
+  background-color: rgb(52, 51, 51);
+  color: white;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.services button:hover {
+  background-color: rgb(67, 66, 66);
+  transition: 1s;
+}
+
+.services-top p {
+  color: white;
+  font-size: 10px;
+
+}
+
+.services-top h2 {
+  color: white;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+
+.fifty-deg {
+  width: 50%;
+}
+
+.second {
+  display: block;
+  padding: 10px;
+  grid-column: 1/3;
+  grid-row: 1/2;
+  /* background-color: #333333; */
+  background-image: url(./img/white-geometrical-shapes-background.jpg);
+  border-radius: 15px;
+  
+}
+
+.thrid {
+  display: block;
+  align-items: center;
+  padding: 10px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-radius: 15px;
+  background-color: #C84C09;
+}
+
+.four {
+  display: block;
+  padding: 10px;
+  border-radius: 15px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: #C4E609;
+}
+
+.section-item-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-item-top p {
+  text-transform: uppercase;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.white p {
+  color: white;
+}
+
+.kkk {
+  margin-top: 130px;
+  color: black;
+}
+
+.hhh {
+  color: white;
+}
+
+.jjj {
+  color: black;
+}
+
+.active {
+  margin-top: 20px;
+  font-size: clamp(5px, 5vw, 13px);
+  line-height: 17px;
+}
+
+.active span {
+  color: black;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sss {
+  margin-top: 20px;
+  display: block;
+  text-align: right;
+}
+
+.hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  pointer-events: none;
+}
+
+.visible {
+  position: relative;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
+  max-height: 500px;
+}
+
+<!-- <section class="sec-section">
+<div class="container sec-section-team">
+  <h1 class="Our-team">
+    Who are we?
+  </h1>
+  <div class="team-items">
+    <a href="" class="item">
+      <h3>Frontend Developers</h3>
+      <p>
+        Crafting intuitive interfaces and exceptional user experiences (UX/UI) using modern technologies like
+        React, Vue, and Angular.
+      </p>
+    </a>
+    <a href="" class="item">
+      <h3>Backend Developers</h3>
+      <p>
+        Ensuring stability and reliability of the server-side, working with Node.js, Python, PHP, Java, and other
+        technologies.
+      </p>
+    </a>
+    <a href="" class="item">
+      <h3>Fullstack Developers</h3>
+      <p>
+        Versatile experts combining frontend and backend development to deliver comprehensive solutions.
+      </p>
+    </a>
+  </div>
+  <div class="team-items2">
+    <a href="" class="item">
+      <h3>Designers</h3>
+      <p>
+        Creative minds behind modern, stylish, and user-friendly designs.
+      </p>
+    </a>
+    <a href="" class="item">
+      <h3>Quality Assurance (QA) Engineers</h3>
+      <p>
+        Ensuring that our products function flawlessly through rigorous testing.
+      </p>
+    </a>
+    <a href="" class="item">
+      <h3>DevOps Engineers</h3>
+      <p>
+        Streamlining deployments and optimizing infrastructure for seamless performance.
+      </p>
+    </a>
+  </div>
+  <div class="why-are-we">
+    <div class="item-we">
+      <h4>Expertise and Experience</h4>
+      <p>Our team consists of specialists with years of experience in software development, mobile apps, and web
+        solutions</p>
+    </div>
+    <div class="item-we">
+      <h4>Tailored Approach</h4>
+      <p>We always consider the specifics of your business and offer solutions that perfectly match your goals.
+      </p>
+    </div>
+    <div class="item-we">
+      <h4>Cutting-Edge Technologies</h4>
+      <p>We use the latest tools and frameworks to create high-performance, scalable products.</p>
+    </div>
+    <div class="item-we">
+      <h4>Result-Oriented Work</h4>
+      <p>We don’t just write code – we create solutions that drive your business success.</p>
+    </div>
+  </div>
+</div>
+</section> -->
