@@ -283,6 +283,16 @@
      font-size: 2rem;
    }
  }
+ @media (max-width: 768px) {
+  .portfolio-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      gap: 20px;
+  }
+  .portfolio-title {
+      font-size: 2rem;
+  }
+}
 
  /* Footer */
  @media screen and (max-width: 1650px) and (min-width: 1440px) {
