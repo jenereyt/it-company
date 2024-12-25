@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechPro</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="./media.css">
+  <link rel="stylesheet" href="main-style.css">
+  <link rel="stylesheet" href="./main-media.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -16,68 +16,77 @@
 <body>
   <header class="header">
     <div class="header-content">
-      <div class="logo">
+      <a href="./index.html" class="logo">
         <img src="./img/logok.png" alt="Логотип">
         <span class="logo-text">TechPro</span>
-      </div>
+      </a>
       <div class="burger-menu" onclick="toggleMobileMenu()">
-        <img src="./img/burger.svg" class="bi bi-list"></img>
+        <img src="./img/burger.svg" class="bi bi-list">
       </div>
       <nav class="nav-menu">
         <div class="nav-item">
-          Услуги
+          <a href="./services/service.html" class="nav-item-link">Услуги</a>
           <div class="dropdown">
-            <div class="dropdown-item">Веб-разработка</div>
-            <div class="dropdown-item">Мобильные приложения</div>
-            <div class="dropdown-item">Разработка ПО</div>
-            <div class="dropdown-item">UX/UI Дизайн</div>
+            <a href="./services/web-dev/web.html" class="dropdown-item">Веб-разработка</a>
+            <a href="./services/mob-dev/mob.html" class="dropdown-item">Мобильные приложения</a>
+            <a href="#" class="dropdown-item">Разработка ПО</a>
+            <a href="./services/ui/ui.html" class="dropdown-item">UX/UI Дизайн</a>
           </div>
         </div>
+
         <div class="nav-item">
-          Технологии
+          <a href="" class="nav-item-link">Портфолио</a>
           <div class="dropdown">
-            <div class="dropdown-item">React</div>
-            <div class="dropdown-item">Node.js</div>
-            <div class="dropdown-item">Cloud Solutions</div>
-            <div class="dropdown-item">Machine Learning</div>
+            <a href="#" class="dropdown-item">Кейсы</a>
+            <a href="#" class="dropdown-item">Проекты</a>
+            <a href="#" class="dropdown-item">Достижения</a>
           </div>
         </div>
+
         <div class="nav-item">
-          Портфолио
+          <a href="" class="nav-item-link">Решения</a>
           <div class="dropdown">
-            <div class="dropdown-item">Кейсы</div>
-            <div class="dropdown-item">Проекты</div>
-            <div class="dropdown-item">Достижения</div>
+            <a href="#" class="dropdown-item">Enterprise</a>
+            <a href="#" class="dropdown-item">Стартапы</a>
+            <a href="#" class="dropdown-item">Аутсорсинг</a>
           </div>
         </div>
+
         <div class="nav-item">
-          Решения
+          <a href="" class="nav-item-link">Команда</a>
           <div class="dropdown">
-            <div class="dropdown-item">Enterprise</div>
-            <div class="dropdown-item">Стартапы</div>
-            <div class="dropdown-item">Аутсорсинг</div>
+            <a href="#" class="dropdown-item">О нас</a>
+            <a href="#" class="dropdown-item">Вакансии</a>
+            <a href="#" class="dropdown-item">Культура</a>
           </div>
         </div>
-        <div class="nav-item">
-          Команда
-          <div class="dropdown">
-            <div class="dropdown-item">О нас</div>
-            <div class="dropdown-item">Вакансии</div>
-            <div class="dropdown-item">Культура</div>
-          </div>
+
+        <div class="mobile-menu-actions">
+          <a href="#" class="btn btn-primary mobile-request-btn">Оставить заявку</a>
+          <a href="#" class="btn btn-secondary login-btn mobile-login-btn">Войти</a>
         </div>
       </nav>
 
       <div class="action-buttons">
         <a href="#" class="btn btn-primary">Оставить заявку</a>
-        <a href="#" class="btn btn-secondary">Консультация</a>
+        <a href="#" class="btn btn-secondary login-btn">Войти</a>
       </div>
-      <div class="mobile-action-buttons">
-        <a href="#" class="btn btn-primary">Оставить заявку</a>
-        <a href="#" class="btn btn-secondary">Консультация</a>
+    </div>
+
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Вход</h2>
+        <form id="login-form">
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Пароль" required>
+          <button type="submit" class="btn btn-primary">Войти</button>
+          <p>Нет аккаунта? <a href="#" class="register-link">Регистрация</a></p>
+        </form>
       </div>
     </div>
   </header>
+
   <div class="section-first">
     <div class="section-first-container">
       <div class="section-first-text">
@@ -92,7 +101,6 @@
     </div>
   </div>
 
-  <!-- Секция особенностей -->
   <div class="section-features">
     <div class="section-features-item">
       <i class="fas fa-laptop-code text-blue-600"></i>
@@ -122,38 +130,25 @@
         <i class="fas fa-project-diagram service-icon"></i>
         <h3 class="service-title">Разработка ПО</h3>
         <p class="service-description">Создание надежных программных решений</p>
-        <div class="service-details">
-          <p>Мы разрабатываем кастомное программное обеспечение под ваши бизнес-процессы.</p>
-        </div>
       </div>
       <div class="service-card">
         <i class="fas fa-rocket service-icon"></i>
         <h3 class="service-title">Мобильные приложения</h3>
         <p class="service-description">Инновационные мобильные решения</p>
-        <div class="service-details">
-          <p>Создаем приложения для iOS и Android с уникальным пользовательским опытом.</p>
-        </div>
       </div>
       <div class="service-card">
         <i class="fas fa-cloud-upload-alt service-icon"></i>
         <h3 class="service-title">Облачные сервисы</h3>
         <p class="service-description">Надежные облачные инфраструктуры</p>
-        <div class="service-details">
-          <p>Миграция, поддержка и оптимизация облачных инфраструктур.</p>
-        </div>
       </div>
       <div class="service-card">
         <i class="fas fa-brain service-icon"></i>
         <h3 class="service-title">Анализ данных</h3>
         <p class="service-description">Аналитика и визуализация</p>
-        <div class="service-details">
-          <p>Помогаем принимать бизнес-решения на основе глубокого анализа данных.</p>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- Модальное окно контакта -->
   <div id="contactModal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
@@ -161,11 +156,12 @@
         <h2>Свяжитесь с нами</h2>
         <input type="text" placeholder="Ваше имя" required>
         <input type="email" placeholder="Ваш email" required>
-        <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+        <textarea style="resize: none;" placeholder="Ваше сообщение" rows="4" required></textarea>
         <button type="submit">Отправить</button>
       </form>
     </div>
   </div>
+
   <div class="tech-journey-wrapper">
     <div class="tech-journey-container">
       <h2 class="section-title">Технологический путь</h2>
@@ -226,131 +222,131 @@
       </div>
     </div>
   </div>
+
   <div class="portfolio-header">
     <h1 class="portfolio-title">Наше Портфолио</h1>
-    <p class="portfolio-subtitle">Мы создаем инновационные цифровые решения, которые помогают бизнесу расти и развиваться. Каждый проект - это уникальный подход и передовые технологии.</p>
-</div>
-<div class="portfolio-container">
+    <p class="portfolio-subtitle">Мы создаем инновационные цифровые решения, которые помогают бизнесу расти и
+      развиваться. Каждый проект - это уникальный подход и передовые технологии.</p>
+  </div>
+
+  <div class="portfolio-container">
     <div class="project-card">
-        <img src="./img/pexels-mart-production-7709146.jpg" alt="CRM Система" class="project-image">
-        <div class="project-info">
-            <div class="project-type">Веб-приложение</div>
-            <h3 class="project-title">Корпоративная CRM-система</h3>
-            <p class="project-description">Полнофункциональная система управления взаимоотношениями с клиентами с модулями аналитики и автоматизации продаж</p>
-            <div class="project-technologies">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MongoDB</span>
-                <span class="tech-tag">GraphQL</span>
-            </div>
+      <img src="./img/pexels-mart-production-7709146.jpg" alt="CRM Система" class="project-image">
+      <div class="project-info">
+        <div class="project-type">Веб-приложение</div>
+        <h3 class="project-title">Корпоративная CRM-система</h3>
+        <p class="project-description">Полнофункциональная система управления взаимоотношениями с клиентами с модулями
+          аналитики и автоматизации продаж</p>
+        <div class="project-technologies">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">MongoDB</span>
+          <span class="tech-tag">GraphQL</span>
         </div>
+      </div>
     </div>
     <div class="project-card">
-        <img src="./img/pexels-ketut-subiyanto-4436296.jpg" alt="Мобильное Приложение" class="project-image">
-        <div class="project-info">
-            <div class="project-type">Мобильное приложение</div>
-            <h3 class="project-title">Фитнес-Трекер</h3>
-            <p class="project-description">Мобильное приложение для персонального фитнес-мониторинга с интеграцией умных часов и персональными рекомендациями</p>
-            <div class="project-technologies">
-                <span class="tech-tag">Flutter</span>
-                <span class="tech-tag">Firebase</span>
-                <span class="tech-tag">Machine Learning</span>
-            </div>
+      <img src="./img/pexels-ketut-subiyanto-4436296.jpg" alt="Мобильное Приложение" class="project-image">
+      <div class="project-info">
+        <div class="project-type">Мобильное приложение</div>
+        <h3 class="project-title">Фитнес-Трекер</h3>
+        <p class="project-description">Мобильное приложение для персонального фитнес-мониторинга с интеграцией умных
+          часов и персональными рекомендациями</p>
+        <div class="project-technologies">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">Machine Learning</span>
         </div>
+      </div>
     </div>
     <div class="project-card">
-        <img src="./img/pexels-negativespace-34577.jpg" alt="E-commerce" class="project-image">
-        <div class="project-info">
-            <div class="project-type">Интернет-магазин</div>
-            <h3 class="project-title">E-commerce Платформа</h3>
-            <p class="project-description">Многофункциональный онлайн-магазин с персонализированными рекомендациями, мультиязычностью и адаптивным дизайном</p>
-            <div class="project-technologies">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">Stripe</span>
-                <span class="tech-tag">Docker</span>
-                <span class="tech-tag">Redis</span>
-            </div>
+      <img src="./img/pexels-negativespace-34577.jpg" alt="E-commerce" class="project-image">
+      <div class="project-info">
+        <div class="project-type">Интернет-магазин</div>
+        <h3 class="project-title">E-commerce Платформа</h3>
+        <p class="project-description">Многофункциональный онлайн-магазин с персонализированными рекомендациями,
+          мультиязычностью и адаптивным дизайном</p>
+        <div class="project-technologies">
+          <span class="tech-tag">Next.js</span>
+          <span class="tech-tag">Stripe</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Redis</span>
         </div>
+      </div>
     </div>
     <div class="project-card">
-        <img src="./img/pexels-julia-m-cameron-4145153.jpg" alt="Образовательная Платформа" class="project-image">
-        <div class="project-info">
-            <div class="project-type">Веб-платформа</div>
-            <h3 class="project-title">Онлайн-Школа</h3>
-            <p class="project-description">Интерактивная образовательная платформа с системой онлайн-курсов, видео-уроками и персональной аналитикой прогресса</p>
-            <div class="project-technologies">
-                <span class="tech-tag">Vue.js</span>
-                <span class="tech-tag">Django</span>
-                <span class="tech-tag">WebRTC</span>
-                <span class="tech-tag">PostgreSQL</span>
-            </div>
+      <img src="./img/pexels-julia-m-cameron-4145153.jpg" alt="Образовательная Платформа" class="project-image">
+      <div class="project-info">
+        <div class="project-type">Веб-платформа</div>
+        <h3 class="project-title">Онлайн-Школа</h3>
+        <p class="project-description">Интерактивная образовательная платформа с системой онлайн-курсов, видео-уроками и
+          персональной аналитикой прогресса</p>
+        <div class="project-technologies">
+          <span class="tech-tag">Vue.js</span>
+          <span class="tech-tag">Django</span>
+          <span class="tech-tag">WebRTC</span>
+          <span class="tech-tag">PostgreSQL</span>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
   <footer class="footer">
-    <div class="footer-top">
-        <div class="social-icons">
-            <a href="#" class="telegram"><i class="fab fa-telegram"></i></a>
-            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="contact-info">
-            <p>Телефон: +998 97 919 10 70</p>
-            <p>Адрес: г. Самарканд, ул. Новая, 15</p>
-            <p>Email: TechPro@hmail.com</p>
-        </div>
+    <div class="footer-top container2">
+      <div class="social-icons">
+        <a href="#" class="telegram"><i class="fab fa-telegram"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="contact-info">
+        <a href="tel:+998979191070">Телефон: +998 97 919 10 70</a>
+        <p>Адрес: г. Самарканд, ул. Новая, 15</p>
+        <p>Email: TechPro@hmail.com</p>
+      </div>
     </div>
 
-    <div class="footer-content">
-        <div class="footer-section">
-            <h4>О Компании</h4>
-            <div class="footer-links">
-                <a href="#">История компании</a>
-                <a href="#">Наша миссия</a>
-                <a href="#">Команда</a>
-                <a href="#">Careers</a>
-                <a href="#">Достижения</a>
-            </div>
+    <div class="footer-content container2">
+      <div class="footer-section">
+        <h4>О Компании</h4>
+        <div class="footer-links">
+          <a href="#">Команда</a>
+          <a href="#">Careers</a>
         </div>
+      </div>
 
-        <div class="footer-section">
-            <h4>Услуги</h4>
-            <div class="footer-links">
-                <a href="#">Веб-разработка</a>
-                <a href="#">Мобильные приложения</a>
-                <a href="#">UX/UI Дизайн</a>
-                <a href="#">Консалтинг</a>
-                <a href="#">Техническая поддержка</a>
-            </div>
+      <div class="footer-section">
+        <h4>Услуги</h4>
+        <div class="footer-links">
+          <a href="./services/web-dev/web.html">Веб-разработка</a>
+          <a href="./services/mob-dev/mob.html">Мобильные приложения</a>
+          <a href="./services/ui/ui.html">UX/UI Дизайн</a>
+          <a href="#">Консалтинг</a>
         </div>
+      </div>
 
-        <div class="footer-section">
-            <h4>Клиентам</h4>
-            <div class="footer-links">
-                <a href="#">Часто задаваемые вопросы</a>
-                <a href="#">Политика конфиденциальности</a>
-                <a href="#">Условия использования</a>
-                <a href="#">Гарантии</a>
-                <a href="#">Отзывы</a>
-            </div>
+      <div class="footer-section">
+        <h4>Клиентам</h4>
+          <div class="footer-links">
+          <a href="/forClients/FAQ/faq.html">Часто задаваемые вопросы</a>
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Условия использования</a>
+          <a href="#">Гарантии</a>
+          <a href="#">Отзывы</a>
         </div>
+      </div>
 
-        <div class="footer-section">
-            <h4>Ресурсы</h4>
-            <div class="footer-links">
-                <a href="#">Блог</a>
-                <a href="#">Кейсы</a>
-                <a href="#">Вебинары</a>
-                <a href="#">Обучающие материалы</a>
-                <a href="#">Инструменты</a>
-            </div>
+      <div class="footer-section">
+        <h4>Ресурсы</h4>
+        <div class="footer-links">
+          <a href="#">Блог</a>
+          <a href="#">Кейсы</a>
         </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
-  <script src="./script.js"></script>
+  <script src="./main-script.js"></script>
 </body>
 
 </html>

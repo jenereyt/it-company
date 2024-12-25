@@ -1,26 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const burgerMenu = document.querySelector('.burger-menu');
-  const navMenu = document.querySelector('.nav-menu');
+  let burgerMenu = document.querySelector('.burger-menu');
+  let navMenu = document.querySelector('.nav-menu');
+  let loginBtns = document.querySelectorAll('.login-btn');
+  let loginModal = document.getElementById('login-modal');
+  let closeModalBtn = document.querySelector('.close-modal');
 
-  // Переключение мобильного меню
-  burgerMenu.addEventListener('click', () => {
+  function toggleMobileMenu() {
     navMenu.classList.toggle('mobile-active');
-  });
-
-  // Закрытие меню при клике вне его
+  }
+  window.toggleMobileMenu = toggleMobileMenu;
   document.addEventListener('click', (e) => {
     const isClickInsideMenu = navMenu.contains(e.target);
     const isClickOnBurger = burgerMenu.contains(e.target);
-
     if (!isClickInsideMenu && !isClickOnBurger) {
       navMenu.classList.remove('mobile-active');
     }
   });
+  loginBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginModal.style.display = 'block';
+      navMenu.classList.remove('mobile-active');
+    });
+  });
+  closeModalBtn.addEventListener('click', () => {
+    loginModal.style.display = 'none';
+  });
+  window.addEventListener('click', (e) => {
+    if (e.target === loginModal) {
+      loginModal.style.display = 'none';
+    }
+  });
+  let loginForm = document.getElementById('login-form');
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Вход выполняется...');
+    loginModal.style.display = 'none';
+  });
 });
 
 
-
- // Модальное окно
  const contactBtn = document.getElementById('contactBtn');
  const contactModal = document.getElementById('contactModal');
  const closeBtn = document.querySelector('.close-btn');
@@ -33,24 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
  closeBtn.addEventListener('click', () => {
      contactModal.style.display = 'none';
  });
-
- // Закрытие модального окна при клике вне его
  window.addEventListener('click', (e) => {
      if (e.target === contactModal) {
          contactModal.style.display = 'none';
      }
  });
-
- // Обработка формы
  const contactForm = document.querySelector('.contact-form');
  contactForm.addEventListener('submit', (e) => {
      e.preventDefault();
      alert('Сообщение отправлено! Мы свяжемся с вами в ближайшее время.');
      contactModal.style.display = 'none';
  });
-
-
-
 
  document.addEventListener('DOMContentLoaded', () => {
   const timelineItems = document.querySelectorAll('.timeline-item');
