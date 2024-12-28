@@ -121,6 +121,9 @@
    .cases-title {
      font-size: 2rem;
    }
+   /* .workflow{
+    grid-template-columns: repeat(2, 1fr);
+   } */
  }
 
 

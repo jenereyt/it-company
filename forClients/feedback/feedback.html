@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechPro</title>
-  <link rel="stylesheet" href="./ui-style.css">
-  <link rel="stylesheet" href="./ui-media.css">
+  <title>Отзывы клиентов</title>
+  <link rel="stylesheet" href="./feedback-style.css">
+  <link rel="stylesheet" href="./feedback-media.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -79,52 +80,61 @@
       </div>
     </div>
   </header>
-  <main>
-    <section class="design-showcase">
-      <div class="design-content">
-        <div class="design-text">
-          <h2>Создаем будущее дизайна</h2>
-          <p>Мы объединяем инновационные идеи с передовыми технологиями, чтобы создавать уникальные цифровые решения. Наш подход основан на глубоком понимании пользовательского опыта и современных тенденций в дизайне.</p>
-
-        </div>
-        <div class="design-circle">
-          <div class="floating-elements" id="floatingElements"></div>
-        </div>
+  <main class="reviews-container">
+    <div class="reviews-header">
+      <h1 class="reviews-title">Отзывы наших клиентов</h1>
+      <div class="reviews-stats">
+        <div class="average-rating">4.8</div>
+        <div>Средняя оценка</div>
       </div>
-    </section>
+    </div>
 
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-  
-    <section class="wave-section">
-      <div class="wave"></div>
-      <div class="noise"></div>
-      
-      <div class="wave-container">
-        <h2 class="wave-title">Инновационные <span>решения</span></h2>
-        
-        <div class="cards-container">
-          <div class="card" data-tilt>
-            <div class="card-icon">⚡</div>
-            <h3>Быстрая разработка</h3>
-            <p>Используем современные технологии и методологии для быстрого создания качественных продуктов</p>
-          </div>
-          
-          <div class="card" data-tilt>
-            <div class="card-icon">🎯</div>
-            <h3>Точные решения</h3>
-            <p>Создаем дизайн, который точно соответствует потребностям ваших пользователей</p>
-          </div>
-          
-          <div class="card" data-tilt>
-            <div class="card-icon">🚀</div>
-            <h3>Оптимизация</h3>
-            <p>Улучшаем производительность и оптимизируем каждый аспект вашего продукта</p>
+    <div class="filter-section">
+      <button class="filter-button active" data-rating="all">Все отзывы</button>
+      <button class="filter-button" data-rating="5">5 звезд</button>
+      <button class="filter-button" data-rating="4">4 звезды</button>
+      <button class="filter-button" data-rating="3">3 звезды и ниже</button>
+    </div>
+
+    <div class="reviews-grid" id="reviewsGrid">
+    </div>
+
+    <section class="add-review-section" id="addReviewSection">
+      <form class="review-form" id="reviewForm">
+        <div class="form-group">
+          <label class="form-label" for="name">Ваше имя</label>
+          <input type="text" id="name" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="company">Компания</label>
+          <input type="text" id="company" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Оценка</label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" required>
+            <label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">★</label>
           </div>
         </div>
-      </div>
+
+        <div class="form-group">
+          <label class="form-label" for="review">Ваш отзыв</label>
+          <textarea style="resize: none;" id="review" class="form-textarea" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-review-btn">Отправить отзыв</button>
+      </form>
     </section>
-  
   </main>
   <footer class="footer">
     <div class="footer-top container2">
@@ -146,7 +156,7 @@
         <h4>О Компании</h4>
         <div class="footer-links">
           <a href="/aboutCompany/team/team.html">Команда</a>
-          <a href="#">Careers</a> 
+          <a href="#">Careers</a>
         </div>
       </div>
 
@@ -155,6 +165,7 @@
         <div class="footer-links">
           <a href="/services/web-dev/web.html">Веб-разработка</a>
           <a href="/services/mob-dev/mob.html">Мобильные приложения</a>
+          <a href="/services/ui/ui.html">Разработка ПО</a>
           <a href="/services/ui/ui.html">UX/UI Дизайн</a>
         </div>
       </div>
@@ -178,47 +189,8 @@
       </div>
     </div>
   </footer>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-  <script>
-    // Инициализация эффекта наклона для карточек
-    VanillaTilt.init(document.querySelectorAll(".card"), {
-      max: 15,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.2,
-    });
-
-    const cursor = document.querySelector('.cursor');
-    const cursorFollower = document.querySelector('.cursor-follower');
-    
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-      
-      setTimeout(() => {
-        cursorFollower.style.left = e.clientX + 'px';
-        cursorFollower.style.top = e.clientY + 'px';
-      }, 100);
-    });
-
-    // Эффект при наведении на карточки
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1.5)';
-      });
-
-      card.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
-      });
-    });
-  </script>
-
-
-  <script src="./ui-script.js"></script>
+  <div class="loading-indicator" id="loadingIndicator">Сохранение отзыва...</div>
+  <script src="./feedback.js"></script>
 </body>
 
 </html>

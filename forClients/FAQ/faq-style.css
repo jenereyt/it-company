@@ -168,7 +168,6 @@ a {
   display: none;
 }
 
-/* Модальное окно */
 .modal {
   display: none;
   position: fixed;
@@ -245,7 +244,6 @@ a {
   border-radius: 2px;
 }
 
-/* FAQ Section Styles */
 .faq-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
@@ -297,7 +295,6 @@ a {
   transition: all 0.3s ease;
 }
 
-/* Вертикальная линия */
 .faq-toggle::before {
   width: 2px;
   height: 16px;
@@ -306,7 +303,6 @@ a {
   transform-origin: center;
 }
 
-/* Горизонтальная линия */
 .faq-toggle::after {
   width: 16px;
   height: 2px;
@@ -316,7 +312,6 @@ a {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Анимация при активном состоянии */
 .faq-item.active .faq-toggle::before {
   transform: rotate(90deg);
 }
@@ -326,7 +321,6 @@ a {
   transform: scale(0);
 }
 
-/* Плавное появление ответа */
 .faq-answer {
   margin-top: 16px;
   color: #4a5568;
@@ -344,7 +338,6 @@ a {
   margin-top: 16px;
 }
 
-/* Stats Section Styles */
 .stats-section {
   background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
   color: white;

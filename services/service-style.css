@@ -231,7 +231,7 @@ a {
   max-width: 1650px;
   margin: 0 auto;
   padding: 80px 20px;
-  min-height: 90vh;
+  min-height: 500px;
 }
 
 .hero-content {
@@ -341,8 +341,9 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  max-width: 1200px;
+  max-width: 1650px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .service-card {
@@ -382,6 +383,9 @@ a {
   line-height: 1.6;
 }
 
+.min-h-screen {
+  min-height: 500px;
+}
 
 
 .why-us-container {
@@ -682,9 +686,9 @@ a {
 }
 
 .workflow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   margin-top: 30px;
 }
 
@@ -727,6 +731,7 @@ a {
   max-width: 1650px;
   margin: 0 auto;
 }
+
 .footer {
   background-color: #f5f5f5;
   color: black;
@@ -818,4 +823,3 @@ a {
 .footer-links a:hover {
   color: #4a90e2;
 }
-

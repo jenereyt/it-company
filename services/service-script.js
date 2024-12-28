@@ -158,3 +158,13 @@ codeLines.forEach(line => {
     line.style.backgroundColor = 'rgba(59, 130, 246, 0.1)';
   });
 });
+
+const codeAnimation = document.querySelector('.code-animation');
+
+for (let i = 0; i < 10; i++) {
+  const codeLine = document.createElement('div');
+  codeLine.classList.add('code-line');
+  codeLine.style.top = `${i * 30}px`;
+  codeLine.style.width = `${Math.random() * 80 + 20}%`;
+  codeAnimation.appendChild(codeLine);
+}
