@@ -5,57 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechPro</title>
-  <link rel="stylesheet" href="./service-style.css">
-  <link rel="stylesheet" href="./service-media.css">
+  <link rel="stylesheet" href="./project-media.css">
+  <link rel="stylesheet" href="./project.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/header-footer/header-footer-media.css">
+  <link rel="stylesheet" href="/header-footer/header-footer.css">
+  <link rel="stylesheet" href="/font/font.css">
 </head>
 
 <body>
   <header class="header">
     <div class="header-content">
-      <a href="../index.html" class="logo">
-        <img src="../img/logok.png" alt="Логотип">
+      <a href="/index.html" class="logo">
+        <img src="/img/logok.png" alt="Логотип">
         <span class="logo-text">TechPro</span>
       </a>
       <div class="burger-menu" onclick="toggleMobileMenu()">
-        <img src="../img/burger.svg" class="bi bi-list">
+        <img src="/img/burger.svg" class="bi bi-list">
       </div>
       <nav class="nav-menu">
         <div class="nav-item">
-          <a href="#" class="nav-item-link">Услуги</a>
+          <div class="nav-item-link">Услуги</div>
           <div class="dropdown">
-            <a href="./web-dev/web.html" class="dropdown-item">Веб-разработка</a>
-            <a href="./mob-dev/mob.html" class="dropdown-item">Мобильные приложения</a>
-            <a href="#" class="dropdown-item">Разработка ПО</a>
+            <a href="/services/web-dev/web.html" class="dropdown-item">Веб-разработка</a>
+            <a href="/services/mob-dev/mob.html" class="dropdown-item">Мобильные приложения</a>
+            <a href="/services/PO-dev/dev-po.html" class="dropdown-item">Разработка ПО</a>
             <a href="/services/ui/ui.html" class="dropdown-item">UX/UI Дизайн</a>
           </div>
         </div>
 
         <div class="nav-item">
-          <a href="" class="nav-item-link">Портфолио</a>
+          <div class="nav-item-link">Портфолио</div>
           <div class="dropdown">
-            <a href="#" class="dropdown-item">Кейсы</a>
-            <a href="#" class="dropdown-item">Проекты</a>
-            <a href="#" class="dropdown-item">Достижения</a>
+            <a href="/resourse/case/case.html" class="dropdown-item">Кейсы</a>
+            <a href="/resourse/project/project.html" class="dropdown-item">Проекты</a>
+            <a href="/resourse/achivments/achvments.html" class="dropdown-item">Достижения</a>
           </div>
         </div>
 
         <div class="nav-item">
-          <a href="" class="nav-item-link">Решения</a>
+          <div class="nav-item-link">Решения</div>
           <div class="dropdown">
           </div>
         </div>
 
         <div class="nav-item">
-          <a href="" class="nav-item-link">Команда</a>
+          <div class="nav-item-link">Команда</div>
           <div class="dropdown">
-            <a href="#" class="dropdown-item">О нас</a>
-            <a href="#" class="dropdown-item">Вакансии</a>
-            <a href="#" class="dropdown-item">Культура</a>
+            <a href="/aboutCompany/aboutus/aboutUs.html" class="dropdown-item">О нас</a>
+            <a href="/aboutCompany/careers/careers.html" class="dropdown-item">Вакансии</a>
           </div>
         </div>
 
@@ -97,7 +99,7 @@
       </div>
       <div class="hero-visual">
         <div class="visual-backdrop"></div>
-        <img src="../img/team.jpg" alt="IT Команда" class="hero-image">
+        <img src="/img/team.jpg" alt="IT Команда" class="hero-image">
       </div>
     </div>
     <div id="consultationModal" class="modal">
@@ -274,7 +276,7 @@
 
       <div class="cases-grid">
         <div class="case-card">
-          <img src="../img/magaz.jpg" alt="Проект" class="case-image">
+          <img src="/img/magaz.jpg" alt="Проект" class="case-image">
 
           <div class="case-content">
             <h3 class="case-title">Интернет-магазин электроники</h3>
@@ -296,7 +298,7 @@
         </div>
 
         <div class="case-card">
-          <img src="../img/crrm.jpg" alt="Проект" class="case-image">
+          <img src="/img/crrm.jpg" alt="Проект" class="case-image">
           <div class="case-content">
             <h3 class="case-title">CRM для строительной компании</h3>
             <p class="case-description">Автоматизация управления проектами и коммуникациями</p>
@@ -317,7 +319,7 @@
         </div>
 
         <div class="case-card">
-          <img src="../img/fitness.jpg" alt="Проект" class="case-image">
+          <img src="/img/fitness.jpg" alt="Проект" class="case-image">
           <div class="case-content">
             <h3 class="case-title">Мобильное приложение для фитнес-клуба</h3>
             <p class="case-description">Создание персонализированного мобильного решения для клиентов</p>
@@ -460,7 +462,7 @@
         <h4>О Компании</h4>
         <div class="footer-links">
           <a href="/aboutCompany/team/team.html">Команда</a>
-          <a href="#">Careers</a>
+          <a href="/aboutCompany/careers/careers.html">Careers</a>
         </div>
       </div>
 
@@ -470,6 +472,7 @@
           <a href="/services/web-dev/web.html">Веб-разработка</a>
           <a href="/services/mob-dev/mob.html">Мобильные приложения</a>
           <a href="/services/ui/ui.html">UX/UI Дизайн</a>
+          <a href="/services/PO-dev/dev-po.html">Разработка ПО</a>
         </div>
       </div>
 
@@ -492,7 +495,8 @@
       </div>
     </div>
   </footer>
-  <script src="./service-script.js"></script>
+  <script src="./project.js"></script>
+  <script src="/header-footer/header.js"></script>
 </body>
 
 </html>
