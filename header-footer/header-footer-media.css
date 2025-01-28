@@ -1,36 +1,36 @@
- /* Header */
- @media (max-width: 992px) {
+@media (max-width: 992px) {
   .nav-menu {
     position: fixed !important;
-    top: 0 !important;
-    right: -100% !important;
-    width: 65% !important;
-    background-color: rgba(255, 255, 255, 0.975) !important;
-    transition: right 0.3s ease-in-out !important; 
-    z-index: 1050 !important;
-    padding: 10px 15px 20px !important;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1) !important;
-    flex-direction: column !important;
-    margin: 10% 0 !important;
-    border-radius: 15px 0 0 15px !important;
-  }
-
-  .nav-menu.mobile-active {
+    top: -100% !important;
     right: 0 !important;
+    width: 100% !important;
+    background-color: rgba(255, 255, 255, 0.975) !important;
+    transition: top 0.3s ease-in-out !important;
+    z-index: 1050 !important;
+    padding: 80px 15px 20px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+    flex-direction: column !important;
+    margin: 0 !important;
+    height: auto !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
   }
 
+  /* Скрываем обычные кнопки */
+  .action-buttons {
+    display: none !important;
+  }
+
+  /* Показываем бургер-меню */
   .burger-menu {
-  display: block !important; 
+    display: block !important;
     position: absolute !important;
     top: 15px !important;
     right: 20px !important;
     z-index: 1100 !important;
   }
 
-  .action-buttons {
-    display: none !important;
-  }
-
+  /* Показываем мобильные кнопки */
   .mobile-menu-actions {
     display: flex !important;
     flex-direction: column !important;
@@ -39,10 +39,22 @@
     width: 100% !important;
   }
 
-  .mobile-menu-actions .btn {
+  .nav-menu.mobile-active {
+    top: 0 !important;
+  }
+
+  .dropdown {
+    position: static !important;
     width: 100% !important;
-    text-align: center !important;
-    padding: 12px !important;
+    box-shadow: none !important;
+    padding: 0 10px !important;
+    margin-top: 10px !important;
+    display: none !important;
+    animation: slideDown 0.3s ease !important;
+  }
+
+  .dropdown.show {
+    display: block !important;
   }
 
   .nav-item {
@@ -51,15 +63,65 @@
     border-bottom: 1px solid #f8f9fa !important;
   }
 
-  .dropdown {
-    position: static !important;
-    display: none !important;
-    box-shadow: none !important;
+  .nav-item-link {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 10px !important;
+  }
+
+  .nav-item-link::after {
+    content: '▼' !important;
+    font-size: 12px !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  .nav-item-link.active::after {
+    transform: rotate(180deg) !important;
+  }
+
+  .dropdown-item {
+    padding: 12px 20px !important;
+    margin: 5px 0 !important;
+    background-color: #f8f9fa !important;
+    border-radius: 8px !important;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Стили для мобильных кнопок */
+  .mobile-menu-actions .btn {
     width: 100% !important;
-    padding: 0 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 12px !important;
   }
 }
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.2rem;
+    padding-left: 30px;
+  }
 
+  .logo::before {
+    font-size: 1rem;
+  }
+
+  .logo .system {
+    left: -10px;
+    width: 30px;
+    height: 30px;
+  }
+}
  /* Footer */
  @media screen and (max-width: 1650px) and (min-width: 1440px) {
    .footer-section {
@@ -83,7 +145,7 @@
    }
  }
 
- @media screen and (max-width: 1200px) and (min-width: 992px) {
+ @media screen and (max-width: 1300px) and (min-width: 992px) {
    .footer-top {
      flex-direction: column;
      text-align: center;

@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", serif;
 }
 
 :root {
@@ -19,7 +18,7 @@ html, body {
 
 body {
   padding-top: 75px;
-  font-family: "Roboto", serif ;
+  font-family: "Roboto", serif;
   line-height: 1.6;
   background-color: #f4f4f4;
 
@@ -33,17 +32,12 @@ body {
   --background-light: #f4f4f4;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Roboto", serif;  line-height: 1.6;
   color: var(--text-color);
 }
-
+text{
+  font-weight: 500 !important;
+}
 /* Модальное окно */
 .modal {
   display: none;

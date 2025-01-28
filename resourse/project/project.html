@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechPro</title>
+  <title>Проекты SSLine</title>
   <link rel="stylesheet" href="./project-media.css">
   <link rel="stylesheet" href="./project.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -20,15 +20,53 @@
 <body>
   <header class="header">
     <div class="header-content">
-      <a href="/index.html" class="logo">
-        <img src="/img/logok.png" alt="Логотип">
-        <span class="logo-text">TechPro</span>
+      <a href="/index.html">
+        <svg width="150" height="80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <!-- Иконка программирования (фигурные скобки) -->
+          <text x="10" y="50" font-family="monospace" font-size="40" fill="#4A90E2">
+            <!-- Левая фигурная скобка -->
+            <tspan opacity="0">
+              <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0s" fill="freeze" />
+              {
+            </tspan>
+            <!-- Внутри скобок добавляем символы, связанные с программированием -->
+            <tspan x="25" y="45" font-size="20" fill="#FF6F61" opacity="0">
+              <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.5s" fill="freeze" />
+              &lt;/&gt;
+            </tspan>
+            <!-- Правая фигурная скобка -->
+            <tspan x="53" y="50" opacity="0">
+              <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze" />
+              }
+            </tspan>
+          </text>
+
+          <!-- Текст "Sam Soft Line" -->
+          <text x="75" y="27" font-family="'Roboto', sans-serif" font-size="20" fill="#555">
+            <tspan opacity="0">
+              <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.5s" fill="freeze" />
+              <tspan fill="#4A90E2">S</tspan>am
+            </tspan>
+          </text>
+          <text x="80" y="47" font-family="'Roboto', sans-serif" font-size="20" fill="#555">
+            <tspan opacity="0">
+              <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.7s" fill="freeze" />
+              <tspan fill="#4A90E2">S</tspan>oft
+            </tspan>
+          </text>
+          <text x="85" y="67" font-family="'Roboto', sans-serif" font-size="20" fill="#555">
+            <tspan opacity="0">
+              <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.9s" fill="freeze" />
+              <tspan fill="#4A90E2">L</tspan>ine
+            </tspan>
+          </text>
+        </svg>
       </a>
       <div class="burger-menu" onclick="toggleMobileMenu()">
         <img src="/img/burger.svg" class="bi bi-list">
       </div>
       <nav class="nav-menu">
-        <div class="nav-item">
+        <div class="nav-item no-select">
           <div class="nav-item-link">Услуги</div>
           <div class="dropdown">
             <a href="/services/web-dev/web.html" class="dropdown-item">Веб-разработка</a>
@@ -38,22 +76,22 @@
           </div>
         </div>
 
-        <div class="nav-item">
+        <div class="nav-item no-select">
           <div class="nav-item-link">Портфолио</div>
           <div class="dropdown">
-            <a href="/resourse/case/case.html" class="dropdown-item">Кейсы</a>
+            <a href="" class="dropdown-item">Кейсы</a>
             <a href="/resourse/project/project.html" class="dropdown-item">Проекты</a>
             <a href="/resourse/achivments/achvments.html" class="dropdown-item">Достижения</a>
           </div>
         </div>
 
-        <div class="nav-item">
+        <div class="nav-item no-select">
           <div class="nav-item-link">Решения</div>
-          <div class="dropdown">
-          </div>
+          <!-- <div class="dropdown">
+          </div> -->
         </div>
 
-        <div class="nav-item">
+        <div class="nav-item no-select">
           <div class="nav-item-link">Команда</div>
           <div class="dropdown">
             <a href="/aboutCompany/aboutus/aboutUs.html" class="dropdown-item">О нас</a>
@@ -68,7 +106,7 @@
       </nav>
 
       <div class="action-buttons">
-        <a href="#" class="btn btn-primary">Оставить заявку</a>
+        <a href="#" id="contactBtnn" class="btn btn-primary">Оставить заявку</a>
         <a href="#" class="btn btn-secondary login-btn">Войти</a>
       </div>
     </div>
@@ -85,6 +123,19 @@
         </form>
       </div>
     </div>
+
+    <div id="requestModal" class="request-modal">
+      <div class="request-modal-content">
+        <span class="request-modal-close">&times;</span>
+        <form class="request-form">
+          <h2>Оставьте заявку</h2>
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="email" placeholder="Ваш email" required>
+          <textarea style="resize: none;" placeholder="Ваше сообщение" rows="4" required></textarea>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
   </header>
   <main>
     <div class="hero-container">
@@ -95,48 +146,13 @@
         <p class="hero-subtitle">
           Мы создаем качественные программные продукты, которые помогают вам расти и развиваться в digital-пространстве
         </p>
-        <a href="#" id="consultationBtn" class="hero-cta">Получить консультацию</a>
       </div>
       <div class="hero-visual">
         <div class="visual-backdrop"></div>
         <img src="/img/team.jpg" alt="IT Команда" class="hero-image">
       </div>
     </div>
-    <div id="consultationModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">Получить консультацию</h2>
-          <button class="close-btn" id="closeModal">&times;</button>
-        </div>
 
-        <form id="consultationForm">
-          <div class="form-group">
-            <label class="form-label" for="name">Ваше имя*</label>
-            <input type="text" id="name" class="form-input" required placeholder="Введите ваше имя">
-            <div id="nameError" class="form-error">Пожалуйста, введите имя</div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="phone">Телефон*</label>
-            <input type="tel" id="phone" class="form-input" required placeholder="+7 (___) ___-__-__">
-            <div id="phoneError" class="form-error">Пожалуйста, введите корректный номер телефона</div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="email">Email</label>
-            <input type="email" id="email" class="form-input" placeholder="Введите ваш email">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="message">Комментарий</label>
-            <textarea id="message" class="form-input" rows="4"
-              placeholder="Опишите ваш запрос (необязательно)"></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Отправить заявку</button>
-        </form>
-      </div>
-    </div>
     <h1 class="page-title">Наши IT-услуги</h1>
 
     <div class="services-container">
@@ -402,7 +418,7 @@
 
     <section class="head-of-2">
       <div class="container">
-        <h1>TechPro - Процесс Работы</h1>
+        <h1>SSLine - Процесс Работы</h1>
         <p>Наш систематический подход к разработке проектов</p>
       </div>
     </section>
@@ -453,7 +469,7 @@
       <div class="contact-info">
         <a href="tel:+998979191070">Телефон: +998 97 919 10 70</a>
         <p>Адрес: г. Самарканд, ул. Новая, 15</p>
-        <a href="mailto: jonibek.usa@gmail.com">Email: TechPro@hmail.com</a>
+        <a href="mailto: jonibek.usa@gmail.com">Email: SSLine@hmail.com</a>
       </div>
     </div>
 
@@ -462,7 +478,7 @@
         <h4>О Компании</h4>
         <div class="footer-links">
           <a href="/aboutCompany/team/team.html">Команда</a>
-          <a href="/aboutCompany/careers/careers.html">Careers</a>
+          <a href="/aboutCompany/careers/careers.html">Карьера</a>
         </div>
       </div>
 

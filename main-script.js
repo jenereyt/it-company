@@ -1,4 +1,3 @@
-
  const contactBtn = document.getElementById('contactBtn');
  const contactModal = document.getElementById('contactModal');
  const closeBtn = document.querySelector('.close-btn');
